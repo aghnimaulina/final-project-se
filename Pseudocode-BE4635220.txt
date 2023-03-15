@@ -1,0 +1,28 @@
+Program peminjaman_pengembalian_buku
+
+
+START
+WHILE "Open LibraryApp"
+    DO "SET Ask user already have an account"
+
+IF "have an account"
+    TO PAGE "showBooks"
+ELSE "don't have an account"
+    TO PAGE "create account"
+
+THEN
+IF "user booking the book" == TRUE
+    processingChooseBooks
+    BOOKING book
+ELSE 
+    end
+
+THEN
+IF "user returning the book" == TRUE
+    processingReturningBooks
+ELSE
+    end
+
+FINISH
+    
+
